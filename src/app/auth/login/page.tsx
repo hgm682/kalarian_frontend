@@ -1,9 +1,11 @@
-
 export default function LoginPage() {
     return (
-      <div>
-        <h1>صفحه لاگین</h1>
-        <p>این یه صفحه ساده‌ست که بعداً می‌تونیم روش فرم بذاریم.</p>
-      </div>
+        <><h1>ورود به حساب کاربری</h1>
+            <form>
+                <input type="text" placeholder="ایمیل یا شماره تلفن"/>
+                <input type="password" placeholder="رمز عبور"/>
+                <button type="submit">ورود</button>
+            </form>
+        </>
     );
-  }
+}
