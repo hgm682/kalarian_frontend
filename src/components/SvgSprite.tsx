@@ -1,11 +1,12 @@
 "use client";
-import { useEffect, useState, ReactNode } from "react";
+import {useEffect, useState} from "react";
 
 interface SvgSpriteProps {
     src: string;
 }
 
-export function SvgSprite({ src }: SvgSpriteProps) {
+export function SvgSprite({src}: SvgSpriteProps) {
+
     const [content, setContent] = useState<string>("");
 
     useEffect(() => {
@@ -16,5 +17,7 @@ export function SvgSprite({ src }: SvgSpriteProps) {
 
     if (!content) return null;
 
-    return <div dangerouslySetInnerHTML={{ __html: content }} />;
+    return (
+        <svg style={{display: "none"}} dangerouslySetInnerHTML={{__html: content}}/>
+    );
 }

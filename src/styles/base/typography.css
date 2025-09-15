@@ -1,0 +1,48 @@
+
+.text-h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.1;
+}
+
+.text-body-2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2.17;
+}
+
+.text-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 2.15;
+}
+
+.text-caption {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2.17;
+}
+
+@media (min-width: 1024px) {
+    .text-h4 {
+        font-size: 1.9rem;
+    }
+
+    .text-body-2 {
+        font-size: 1.2rem;
+    }
+
+    .text-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .text-caption {
+        font-size: 1.1rem;
+    }
+}
+
+.text-button-1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.15;
+}

@@ -1,0 +1,3 @@
+.rounded-md, .rounded-medium {
+    border-radius: var(--global-radius);
+}

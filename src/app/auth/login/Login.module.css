@@ -1,0 +1,40 @@
+/* Login.module.css */
+
+.container {
+    opacity: 1;
+    animation-fill-mode: forwards;
+    max-width: 100vw;
+    animation: fade-out 0.3s cubic-bezier(.4, 0, 1, 1) both;
+}
+
+@keyframes fade-out {
+    0% { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.account-wrapper-mainBox {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .account-wrapper-mainBox {
+        max-width: 400px;
+    }
+}
+
+.logo-icon {
+    right: 20px;
+    top: 16px;
+}
+
+@media (min-width: 1024px) {
+    .logo-icon {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.codeInput-trackingOtp {
+    letter-spacing: 1rem;
+}

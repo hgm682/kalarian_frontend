@@ -2,7 +2,9 @@
 function IndexPage() {
     return (
         <div>
-            <p>Hello world!</p>
+            <div className="bg-red-500 lg:bg-blue-500 p-4">
+                تست responsive
+            </div>
         </div>
     )
 }

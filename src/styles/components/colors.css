@@ -1,0 +1,19 @@
+.text-hint-text-error {
+    color: var(--color-hint-text-error);
+}
+
+.text-secondary-700 {
+    color: var(--color-secondary-700);
+}
+
+.bg-neutral-000 {
+    background-color: var(--color-neutral-000);
+}
+
+.bg-neutral-100 {
+    background-color: var(--color-neutral-100);
+}
+
+.bg-neutral-200 {
+    background-color: var(--color-neutral-200);
+}

@@ -5,8 +5,6 @@ export default function Head() {
         <>
             <title>kalarian</title>
             {/* Basic Meta */}
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width" />
             <meta name="theme-color" content="#ef394e" />
             <meta name="description" content="هر آنچه که نیاز دارید با بهترین قیمت بخرید! گوشی، لپ‌تاپ، لباس و ..." />
 
