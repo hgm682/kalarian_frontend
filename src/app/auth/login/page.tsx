@@ -1,3 +1,4 @@
+
 import styles from "@/app/auth/login/Login.module.css";
 import FormComponentFrame from "@/components/FormComponentFrame";
 
@@ -8,7 +9,7 @@ export default function LoginPage() {
                 className={`lg:border lg:border-gray-200 rounded-medium p-5 lg:p-8 flex flex-col items-center justify-start lg:justify-center ${styles['account-wrapper-mainBox']}`}>
                 <div className={'w-full relative flex items-center justify-center mb-3'}>
                     <div
-                        className={`flex cursor-pointer right-0 text-neutral-700 transition-all duration-300 ease-out 00 cursor-pointer fixed lg:absolute  ${styles['logo-icon']}`}>
+                        className={`flex right-0 text-neutral-700 transition-all duration-300 ease-out 00 cursor-pointer fixed lg:absolute  ${styles['logo-icon']}`}>
                         <svg style={{width: '24px', height: '24px', fill: 'var(--color-icon-high-emphasis)'}}>
                             <use xlinkHref="#arrowRight"></use>
                         </svg>
