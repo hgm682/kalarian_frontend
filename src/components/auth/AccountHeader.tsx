@@ -3,14 +3,15 @@
 import React from "react";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
-import {Icon} from "./Icon";
 import Logo from "./Logo";
 import clsx from "clsx";
 import {AuthStep} from "@/constants/AuthStep";
+import styles from "@/components/auth/AccountWrapper.module.css";
 
 export default function AccountHeader({
                                           hasBack = false,
-                                          setStep = (step: AuthStep) => {},
+                                          setStep = (step: AuthStep) => {
+                                          },
                                           firstStep = AuthStep.AUTH,
                                           backUrl = '/',
                                           width = 100,
@@ -48,7 +49,12 @@ export default function AccountHeader({
 
     return (
         <div className="w-full relative flex items-center justify-center mb-3">
-            <Icon icon="arrowRight" size={24} onClick={handleBack} className={iconClasses}/>
+            <div
+                className={`flex right-0 text-neutral-700 transition-all duration-300 ease-out 00 cursor-pointer fixed lg:absolute  ${styles['logo-icon']}`}>
+                <svg style={{width: '24px', height: '24px', fill: 'var(--color-icon-high-emphasis)'}}>
+                    <use xlinkHref="#arrowRight"></use>
+                </svg>
+            </div>
             <Link href="/">
                 <Logo
                     src="https://kalarian.ir/uploads/logo/kalarian_logo.svg"

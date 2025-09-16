@@ -1,7 +1,6 @@
 import React from "react";
 import '@/app/globals.css'
 
-import dynamic from "next/dynamic";
 import Head from "./head";
 import ClientWrapper from "@/components/ClientWrapper";
 

@@ -1,4 +1,3 @@
-import AccountHeader from "@/components/auth/AccountHeader";
 import { AccountWrapper } from "@/components/auth/AccountWrapper";
 import FormComponentFrame from "@/components/FormComponentFrame";
 
@@ -6,7 +5,6 @@ export default function LoginPage() {
 
     return (
         <AccountWrapper>
-            <AccountHeader />
             <div className={'w-full'}>
                 <h1 className="text-h4 text-neutral-900 text-right w-full mt-4">ورود | ثبت‌نام</h1>
                 <p className="text-body-2 text-neutral-700 mt-4 text-right w-full">سلام!</p>
