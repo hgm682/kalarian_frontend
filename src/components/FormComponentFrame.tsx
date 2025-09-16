@@ -1,8 +1,8 @@
 "use client"
 import {useState} from "react";
 import styles from "@/components/FormComponentFrame.module.css";
-import input from "@/components/Input.module.css";
-import textField from "@/components/TextField.module.css";
+import input from "@/components/Input/Input.module.css";
+import textField from "@/components/TextField/TextField.module.css";
 
 export default function FormComponentFrame() {
     const [username, setUsername] = useState("");

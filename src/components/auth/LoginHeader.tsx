@@ -3,12 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import clsx from "clsx";
 import {AuthStep} from "@/constants/AuthStep";
 import styles from "@/components/auth/AccountWrapper.module.css";
+import {Icon} from "@/components/Icon";
 
-export default function AccountHeader({
+export default function LoginHeader({
                                           hasBack = false,
                                           setStep = (step: AuthStep) => {
                                           },
@@ -33,13 +34,14 @@ export default function AccountHeader({
     };
 
     const iconClasses = clsx(
-        "right-0 text-neutral-700 transition-all duration-300 ease-out",
+        "flex right-0 text-neutral-700 transition-all duration-300 ease-out",
         {
             "cursor-pointer": hasBack,
             "opacity-0 pointer-events-none": !hasBack,
             absolute: !isIconFixedMobile,
             "fixed lg:absolute": isIconFixedMobile,
-        }
+        },
+        styles["logo-icon"],
     );
 
     const logoClasses = clsx("transform transition-all duration-500 ease-out", {
@@ -49,16 +51,11 @@ export default function AccountHeader({
 
     return (
         <div className="w-full relative flex items-center justify-center mb-3">
-            <div
-                className={`flex right-0 text-neutral-700 transition-all duration-300 ease-out 00 cursor-pointer fixed lg:absolute  ${styles['logo-icon']}`}>
-                <svg style={{width: '24px', height: '24px', fill: 'var(--color-icon-high-emphasis)'}}>
-                    <use xlinkHref="#arrowRight"></use>
-                </svg>
-            </div>
+            <Icon icon={'arrowRight'} className={iconClasses} size={24} onClick={handleBack}/>
             <Link href="/">
                 <Logo
                     src="https://kalarian.ir/uploads/logo/kalarian_logo.svg"
-                    alt="لوگوی دیجیکالا"
+                    alt="لوگوی کالاریان"
                     width={width}
                     className={logoClasses}
                 />

@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useRef} from "react";
 import {useRouter} from "next/router";
 import {AccountWrapper} from "@/components/auth/AccountWrapper";
-import PasswordInput from "@/components/PasswordInput/PasswordInput";
-import OtpInput from "@/components/OtpInput/OtpInput";
-import OTPResend from "@/components/OTPResend/OTPResend";
+import PasswordInput from "@/components/auth/PasswordInput";
+import OtpInput from "@/components/auth/OtpInput/OtpInput";
+import OTPResend from "@/components/auth/OTPResend";
 import Button from "@/components/Button/Button";
 import {AuthStep} from "@/constants/AuthStep";
 import {sendTrackEvent} from "@/services/analytics";
@@ -44,13 +44,11 @@ function LoginForm() {
                     <h1>ورود | ثبت‌نام</h1>
                     <p>سلام! لطفا شماره موبایل یا ایمیل خود را وارد کنید</p>
 
-                    <form
-                        onSubmit={(e) => {
+                    <form onSubmit={(e) => {
                             e.preventDefault();
                             authRequest({username});
-                            sendTrackEvent("LOGIN_CONTINUE", {isValid: true});
-                        }}
-                    >
+                            // sendTrackEvent("LOGIN_CONTINUE", {isValid: true});
+                        }} >
                         <input
                             type="text"
                             value={username}
