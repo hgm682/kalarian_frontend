@@ -1,0 +1,119 @@
+:root {
+    --color-neutral-000: #ffffff;
+    --color-neutral-100: #f0f0f1;
+    --color-neutral-200: #e0e0e2;
+    --color-neutral-300: #c0c2c5;
+    --color-neutral-400: #a1a3a8;
+    --color-neutral-500: #81858b;
+    --color-neutral-600: #62666d;
+    --color-neutral-650: #424242;
+    --color-neutral-700: #3f4064;
+    --color-neutral-800: #23254e;
+    --color-neutral-850: #212121;
+    --color-neutral-900: #0c0c0c;
+
+    --color-primary-300: #f99966;
+    --color-primary-500: #f76400;
+    --color-primary-700: #cc5800;
+    --color-primary-tonal: #ffe6d9;
+
+    --color-secondary-100: #e6f7fa;
+    --color-secondary-500: #17c0d9;
+    --color-secondary-700: #0d90a6;
+
+
+    --color-blue-primary: #19bfd3;
+
+    --color-icon-high-emphasis: #424750;
+
+    --color-hint-text-error: #b2001a;
+    --color-hint-text-success: #2e7b32;
+    --color-hint-object-error: #d32f2f;
+
+    --color-button-primary: #f76400;
+    --color-button-text-primary: #ffffff;
+    --color-button-secondary: #17c0d9;
+    --color-button-text-secondary: #ffffff;
+
+    --color-button-white: #fff;
+    --color-button-text-white: #0c0c0c;
+    --color-button-black: #0c0c0c;
+    --color-button-text-black: #fff;
+    --color-button-error: #b2001a;
+    --color-button-text-error: #fff;
+    --color-button-brand: #ef4056;
+    --color-button-text-brand: #fff;
+    --color-button-hint-object-error: #ef4056;
+    --color-button-text-hint-object-error: #fff;
+    --color-button-fresh: #05ba58;
+    --color-button-text-fresh: #fff;
+    --color-button-disable: #e0e0e2;
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    :root {*/
+/*        !* Neutral / background *!*/
+/*        --color-neutral-000: #121212;*/
+/*        --color-neutral-100: #1e1e1e;*/
+/*        --color-neutral-200: #2a2a2a;*/
+/*        --color-neutral-300: #333333;*/
+/*        --color-neutral-400: #444444;*/
+/*        --color-neutral-500: #555555;*/
+/*        --color-neutral-600: #666666;*/
+/*        --color-neutral-700: #888888;*/
+/*        --color-neutral-800: #cccccc;*/
+/*        --color-neutral-900: #ffffff;*/
+
+/*        !* Primary / Secondary *!*/
+/*        --color-primary-300: #f99966;*/
+/*        --color-primary-500: #f76400;*/
+/*        --color-primary-700: #cc5800;*/
+/*        --color-primary-tonal: #4d2613;*/
+
+/*        --color-secondary-100: #10343b;*/
+/*        --color-secondary-500: #17c0d9;*/
+/*        --color-secondary-700: #0d90a6;*/
+
+/*        !* Icons / Text Emphasis *!*/
+/*        --color-icon-high-emphasis: #e0e0e0;*/
+
+/*        !* Hint / Error / Success *!*/
+/*        --color-hint-text-error: #ff6b6b;*/
+/*        --color-hint-text-success: #81c784;*/
+/*        --color-hint-object-error: #f44336;*/
+
+/*        !* Buttons *!*/
+/*        --color-button-primary: #f76400;*/
+/*        --color-button-text-primary: #121212;*/
+/*        --color-button-secondary: #0d90a6;*/
+/*        --color-button-text-secondary: #ffffff;*/
+
+/*        --color-button-white: #212121;*/
+/*        --color-button-text-white: #fff;*/
+/*        --color-button-black: #fff;*/
+/*        --color-button-text-black: #212121;*/
+/*        --color-button-error: #ff6b6b;*/
+/*        --color-button-text-error: #fff;*/
+/*        --color-button-brand: #ef4056;*/
+/*        --color-button-text-brand: #fff;*/
+/*        --color-button-hint-object-error: #f44336;*/
+/*        --color-button-text-hint-object-error: #fff;*/
+/*        --color-button-fresh: #05ba58;*/
+/*        --color-button-text-fresh: #fff;*/
+/*        --color-button-disable: #555555;*/
+/*    }*/
+/*}*/
+
+
+:root {
+    --spacing: 4px;
+    --font-family: Vazirmatn, sans-serif;
+    --spacing-base: 4px;
+    --global-radius: 8px;
+    --small-radius: 4px;
+    --medium-radius: 8px;
+    --medium-plus-radius: 12px;
+    --large-radius: 16px;
+}
+
+

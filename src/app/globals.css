@@ -1,0 +1,12 @@
+@import '../styles/base/fonts.css';
+@import '../styles/base/typography.css';
+@import '../styles/base/reset.css';
+
+@import '../styles/utils/variables.css';
+
+@import '../styles/components/button.css';
+@import '../styles/components/borders.css';
+@import '../styles/components/colors.css';
+
+@import "tailwindcss";
+
