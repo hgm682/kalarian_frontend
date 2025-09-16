@@ -1,6 +1,5 @@
 import AccountHeader from "@/components/auth/AccountHeader";
 import { AccountWrapper } from "@/components/auth/AccountWrapper";
-import styles from "@/components/auth/AccountWrapper.module.css";
 import FormComponentFrame from "@/components/FormComponentFrame";
 
 export default function LoginPage() {
