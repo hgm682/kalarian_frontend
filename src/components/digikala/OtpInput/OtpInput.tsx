@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Input } from "@/components/Input/Input"; // فرضی: u.I
+import { Input } from "@/components/digikala/Input/Input"; // فرضی: u.I
 import classNames from "classnames";       // p.d
 import styles from "./OtpInput.module.css"; // v().codeInput__trackingOtp
 import { formatOtp } from "@/utils/otp";    // c.d

@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useRef} from "react";
 import {useRouter} from "next/router";
-import {AccountWrapper} from "@/components/auth/AccountWrapper";
-import PasswordInput from "@/components/auth/PasswordInput";
-import OtpInput from "@/components/auth/OtpInput/OtpInput";
-import OTPResend from "@/components/auth/OTPResend";
-import Button from "@/components/Button/Button";
+import {LoginWrapper} from "@/components/auth/LoginWrapper";
+import PasswordInput from "@/components/digikala/PasswordInput";
+import OtpInput from "@/components/digikala/OtpInput/OtpInput";
+import OTPResend from "@/components/digikala/OTPResend";
+import Button from "@/components/digikala/Button/Button";
 import {AuthStep} from "@/constants/AuthStep";
 import {sendTrackEvent} from "@/services/analytics";
 import {useAuthApi} from "@/services/api";
@@ -38,7 +38,7 @@ function LoginForm() {
     }, [router.query.backUrl]);
 
     return (
-        <AccountWrapper>
+        <LoginWrapper>
             {step === AuthStep.AUTH && (
                 <div className="auth-step">
                     <h1>ورود | ثبت‌نام</h1>
@@ -130,7 +130,7 @@ function LoginForm() {
                     </form>
                 </div>
             )}
-        </AccountWrapper>
+        </LoginWrapper>
     );
 }
 

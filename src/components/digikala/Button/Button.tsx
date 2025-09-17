@@ -1,9 +1,9 @@
-// Button.ts (ماژول 57931)
+// Button.tsx.ts (ماژول 57931)
 import React, { forwardRef } from 'react'; // ماژول 2784
 import { createElement } from 'react'; // ماژول 52322
 import { clsx } from 'clsx'; // ماژول 72677
-import { getColor } from '@/components/Utils/ColorUtils'; // ماژول 23154
-import mergeProps from '@/components/Utils/Utils'; // ماژول 70865
+import { getColor } from '@/components/digikala/Utils/ColorUtils'; // ماژول 23154
+import mergeProps from '@/components/digikala/Utils/Utils'; // ماژول 70865
 import styles from './Button.module.css'; // فرضی، معادل CSS Module (مشابه 86308)
 
 // نوع‌های پراپ‌ها
@@ -25,7 +25,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     loadingClassName?: string;
 }
 
-// کامپوننت Button
+// کامپوننت Button.tsx
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     (
         {
@@ -63,12 +63,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             styles[`Button--${variant}`],
             styles[`Button--${size}`],
             {
-                [styles['Button--fullWidth']]: fullWidth,
-                [styles['Button--disabled']]: disabled,
-                [styles['Button--loading']]: isLoading,
-                [activeClassName || styles['Button--active']]: !disabled && !isLoading,
-                [disabledClassName || styles['Button--disabled']]: disabled,
-                [loadingClassName || styles['Button--loading']]: isLoading,
+                [styles['Button.tsx--fullWidth']]: fullWidth,
+                [styles['Button.tsx--disabled']]: disabled,
+                [styles['Button.tsx--loading']]: isLoading,
+                [activeClassName || styles['Button.tsx--active']]: !disabled && !isLoading,
+                [disabledClassName || styles['Button.tsx--disabled']]: disabled,
+                [loadingClassName || styles['Button.tsx--loading']]: isLoading,
             },
             containerClassName,
             className
@@ -93,25 +93,25 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                             className={clsx(styles['Button__icon'], styles['Button__icon--left'])}
                             style={{ color: getColor(iconLeftColor) }}
                         >
-              {iconLeft}
-            </span>
+                          {iconLeft}
+                        </span>
                     )}
 
                     {/* محتوای دکمه */}
                     {isLoading ? (
                         <span className={styles['Button__loader']}>در حال بارگذاری...</span>
-                    ) : (
-                        children
-                    )}
+                        ) : (
+                            children
+                        )}
 
-                    {/* آیکون سمت راست */}
-                    {iconRight && (
-                        <span
-                            className={clsx(styles['Button__icon'], styles['Button__icon--right'])}
-                            style={{ color: getColor(iconRightColor) }}
-                        >
-              {iconRight}
-            </span>
+                        {/* آیکون سمت راست */}
+                        {iconRight && (
+                            <span
+                                className={clsx(styles['Button__icon'], styles['Button__icon--right'])}
+                                style={{ color: getColor(iconRightColor) }}
+                            >
+                              {iconRight}
+                            </span>
                     )}
                 </button>
             </div>

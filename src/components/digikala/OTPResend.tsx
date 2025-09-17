@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@/components/Button/Button"; // o.z
+import Button from "@/components/digikala/Button/Button"; // o.z
 import Icon from "@/components/Icon";     // s.J
 import { formatTime } from "@/utils/time"; // i.J
 import classNames from "classnames";       // a.d

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input } from "@/components/Input/Input"; // u.I
+import { Input } from "@/components/digikala/Input/Input"; // u.I
 import { mergeProps } from "@/utils/helpers"; // o.Z
 import { jsx } from "react/jsx-runtime"; // i.jsx
 

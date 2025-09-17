@@ -6,7 +6,7 @@ import {useRouter} from "next/navigation";
 import Logo from "../Logo";
 import clsx from "clsx";
 import {AuthStep} from "@/constants/AuthStep";
-import styles from "@/components/auth/AccountWrapper.module.css";
+import styles from "@/components/auth/LoginWrapper.module.css";
 import {Icon} from "@/components/Icon";
 
 export default function LoginHeader({
