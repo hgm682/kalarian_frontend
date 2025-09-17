@@ -7,6 +7,7 @@ import React, {useState} from "react";
 import {AuthStep} from "@/constants/AuthStep";
 import Button from "@/components/Button";
 import Input from "@/components/Input/Input";
+import styles from "@/components/digikala/FormComponentFrame.module.css";
 
 export default function LoginPage() {
 
@@ -24,8 +25,10 @@ export default function LoginPage() {
                         <p className="text-body-2 text-neutral-700 mb-4 text-right w-full">
                             لطفا شماره موبایل یا ایمیل خود را وارد کنید
                         </p>
-                        <form onSubmit={() => {}}>
-                            <Input/>
+                        <form>
+                            <label className={`${styles['FormComponentFrame']} w-full ${styles['FormComponentFrame--normal']}`}>
+                                <Input inputWrapperClassName={`${styles['FormComponentFrame__input-container']} px-2 flex items-center`}/>
+                            </label>
                             <Button type="submit">
                                 ورود
                             </Button>

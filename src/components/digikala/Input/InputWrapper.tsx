@@ -4,7 +4,48 @@ import { clsx } from 'clsx'; // ماژول 72677
 import { getColor } from '@/components/digikala/Utils/ColorUtils'; // ماژول 23154
 import styles from './InputWrapper.module.css'; // ماژول 86308 (CSS Module)
 
-const InputWrapper = forwardRef(
+interface InputWrapperProps {
+    name?: string;
+    type?: "text";
+    value?: string;
+    label?: string;
+    error?: string;
+    helper?: boolean;
+    helperClassName?: string;
+    autoFocus?: boolean;
+    readOnly?: boolean;
+    placeholder?: string;
+    inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+    inputClassName?: string;
+    containerClassName?: string;
+    labelClassName?: string;
+    requiredClassName?: string;
+    required?: boolean;
+    backgroundColor?: string;
+    onFocus?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    onBlur?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    isTextarea?: boolean;
+    activeModeClassName?: string;
+    errorModeClassName?: string;
+    disabled?: boolean;
+    fullWidth?: string;
+    className?: string;
+    errorClassName?: string;
+    successPhrase?: string;
+    successPhraseClassName?: string;
+    labelLeftSlot?: React.ReactNode;
+    prependIcon?: React.ReactNode;
+    prependIconColor?: string;
+    prependIconOnClick?: (e: React.MouseEvent<HTMLSpanElement>) => void;
+    appendSlot?: React.ReactNode;
+    appendIcon?: React.ReactNode;
+    appendIconColor?: string;
+    appendIconOnClick?: (e: React.MouseEvent<HTMLSpanElement>) => void;
+    colorType?: React.ReactNode;
+    labelMargin?: number;
+}
+
+const InputWrapper = forwardRef<HTMLInputElement | HTMLTextAreaElement , InputWrapperProps>(
     (
         {
             type = 'text',
@@ -120,8 +161,8 @@ const InputWrapper = forwardRef(
                             style={{ color: prependIconColor }}
                             onClick={prependIconOnClick}
                         >
-              {prependIcon}
-            </span>
+                          {prependIcon}
+                        </span>
                     )}
                     {appendSlot && <div className="pr-3">{appendSlot}</div>}
 
@@ -150,9 +191,9 @@ const InputWrapper = forwardRef(
                             style={{ color: appendIconColor }}
                             onClick={appendIconOnClick}
                         >
-              {appendIcon}
-            </span>
-                    )}
+                          {appendIcon}
+                        </span>
+                                )}
                 </div>
 
                 {/* Helper/Error/Success Text */}
