@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import {useRouter} from "next/router";
-import {LoginWrapper} from "@/components/auth/LoginWrapper";
+import {Wrapper} from "@/components/auth/Wrapper";
 import PasswordInput from "@/components/digikala/PasswordInput";
 import OtpInput from "@/components/digikala/OtpInput/OtpInput";
 import OTPResend from "@/components/digikala/OTPResend";
@@ -38,7 +38,7 @@ function LoginForm() {
     }, [router.query.backUrl]);
 
     return (
-        <LoginWrapper>
+        <Wrapper>
             {step === AuthStep.AUTH && (
                 <div className="auth-step">
                     <h1>ورود | ثبت‌نام</h1>
@@ -130,7 +130,7 @@ function LoginForm() {
                     </form>
                 </div>
             )}
-        </LoginWrapper>
+        </Wrapper>
     );
 }
 

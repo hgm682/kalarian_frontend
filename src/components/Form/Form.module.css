@@ -1,0 +1,55 @@
+.FormComponentFrame {
+    display: inline-block;
+}
+
+.FormComponentFrame--normal .FormComponentFrame__input-container {
+    border-radius: var(--global-radius);
+    border: 1px solid var(--color-neutral-200);
+}
+
+.FormComponentFrame--outlined .FormComponentFrame__input-container {
+    border: 1px solid var(--color-neutral-200);
+}
+
+.FormComponentFrame--grayOutlined .FormComponentFrame__input-container {
+    border-radius: var(--global-radius);
+    background-color: var(--color-neutral-100);
+    border: 1px solid var(--color-neutral-100);
+}
+
+.FormComponentFrame--grayOutlined--withoutBorder {
+    border: none;
+}
+
+.FormComponentFrame--wide {
+    width: 20rem;
+}
+
+.FormComponentFrame__input-container {
+    width: 100%;
+}
+
+.FormComponentFrame__input-container:not(.FormComponentFrame__input-container--textArea) {
+    height: 4.8rem;
+}
+
+.FormComponentFrame__input-container--disabled {
+    background-color: rgba(var(--color-neutral-100-rgb), 0.7);
+    color: var(--color-neutral-200);
+}
+
+.FormComponentFrame__input-container--readOnly {
+    background-color: rgba(var(--color-neutral-100-rgb), 0.7);
+}
+
+.FormComponentFrame__input-container--rounded {
+    border-radius: 2.4rem !important;
+}
+
+.FormComponentFrame__helper--error {
+    color: var(--color-hint-text-error);
+}
+
+.FormComponentFrame__helper--success {
+    color: var(--color-hint-text-success);
+}

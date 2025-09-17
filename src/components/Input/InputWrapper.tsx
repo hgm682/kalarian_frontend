@@ -1,3 +1,5 @@
+"use client"
+
 import React, {forwardRef, useRef, useState} from "react";
 import styles from "@/components/Input/InputWrapper.module.css";
 import {clsx} from "clsx";
