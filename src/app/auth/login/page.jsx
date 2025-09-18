@@ -12,6 +12,8 @@ import {AuthStep} from "../../../constants/AuthStep";
 import {errorMessages} from '../../../constants/Validation';
 import Wrapper from "../../../components/auth/Wrapper";
 import Header from "../../../components/auth/Header";
+import styles from "../../../components/digikala/FormComponentFrame.module.css";
+import textField from "../../../components/digikala/TextField/TextField.module.css";
 
 function LoginForm({setStep, setResponse, setUsername}) {
 
@@ -34,33 +36,11 @@ function LoginForm({setStep, setResponse, setUsername}) {
                     // });
                     setUsername(username);
                     request({username});
-                }}
-                items={[
-                    {
-                        component: <Input autoFocus inputWrapperProps={{fullWidth: true}}/>,
-                        name: 'username',
-                        defaultValue: '',
-                        rules: {
-                            required: errorMessages.emptyRequiredField,
-                            validate: errorMessages.invalidMobileOrEmail
-                        }
-                    },
-                    {
-                        component: (
-                            <Button
-                                type="submit"
-                                color="primary"
-                                size="large"
-                                mode="filled"
-                                className="w-full mt-6 lg:mt-8 text-button-1"
-                                //isLoading={pending}
-                                CROId="login-register"
-                            >
-                                ورود
-                            </Button>
-                        )
-                    }
-                ]}>
+                }}>
+                <label className={`${styles['FormComponentFrame']} w-full ${styles['FormComponentFrame--normal']}`}>
+                    <Input isTextarea={false} inputClassName={`px-2 ${textField['TextField__input']} text-subtitle w-full ${textField['TextField']} ${textField['TextField--secondary']} text-subtitle w-full py-5 lg:py-2 rounded-medium`} />
+                </label>
+                <Button />
                 <p className="text-caption text-neutral-700 mt-4">
                     ورود شما به معنای پذیرش
                     <Link mode="link" href={URLS.TERMS()} className="mx-1 inline-block text-secondary-700">

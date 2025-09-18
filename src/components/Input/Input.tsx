@@ -1,3 +1,5 @@
+"use client"
+
 import React, {forwardRef} from "react";
 import styles from "@/components/Input/Input.module.css";
 import InputWrapper from "@/components/Input/InputWrapper";
@@ -7,6 +9,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
     error?: string;
     disabled?: false,
+    isTextarea?: boolean;
     backgroundColor?: string;
     textColor?: string;
     inputWrapperClassName?: string;
@@ -20,6 +23,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
          label,
          error,
          disabled,
+         isTextarea,
          backgroundColor,
          textColor,
          inputWrapperClassName,
@@ -58,6 +62,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                 labelClassName={labelClasses}
                 containerClassName={wrapperClasses}
                 inputClassName={inputClasses}
+                isTextarea={isTextarea}
                 inputProps={{
                     ...inputProps,
                     className: styles.input
