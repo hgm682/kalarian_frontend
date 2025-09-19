@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./auth/Wrapper.module.css";
+import styles from "./auth/LoginWrapper/LoginWrapper.module.css";
 
 export default function Logo({ width = 100, ...props }) {
     return (

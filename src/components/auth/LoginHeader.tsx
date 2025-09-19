@@ -6,7 +6,7 @@ import {useRouter} from "next/navigation";
 import Logo from "../Logo";
 import clsx from "clsx";
 import {AuthStep} from "@/constants/AuthStep";
-import styles from "@/components/auth/Wrapper.module.css";
+import styles from "@/components/auth/LoginWrapper/LoginWrapper.module.css";
 import {Icon} from "@/components/Icon";
 
 interface HeaderProps extends React.HTMLProps<HTMLDivElement> {
@@ -20,10 +20,8 @@ interface HeaderProps extends React.HTMLProps<HTMLDivElement> {
     width?: number;
 }
 
-const Header = forwardRef<HTMLDivElement, HeaderProps>(
+const LoginHeader = forwardRef<HTMLDivElement, HeaderProps>(
     ({
-         children,
-         className,
          shouldDefaultBack,
          backUrl,
          setStep,
@@ -65,7 +63,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(
         });
 
         return (
-            <div className="w-full relative flex items-center justify-center mb-3">
+            <div className="w-full relative flex items-center justify-center mb-3" ref={ref} {...props}>
                 <Icon
                     icon={'arrowRight'}
                     className={iconClasses}
@@ -84,6 +82,6 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(
         );
     });
 
-Header.displayName = "Header";
+LoginHeader.displayName = "Header";
 
-export default Header;
+export default LoginHeader;

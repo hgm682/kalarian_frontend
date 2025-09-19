@@ -1,13 +1,13 @@
 import React, {forwardRef, HtmlHTMLAttributes} from "react";
 import clsx from "clsx";
-import styles from "@/components/auth/Wrapper.module.css";
+import styles from "@/components/auth/LoginWrapper/LoginWrapper.module.css";
 
 interface WrapperProps extends HtmlHTMLAttributes<HTMLDivElement> {
     className?: string;
     width?: number;
 }
 
-const Wrapper = forwardRef<HTMLDivElement, WrapperProps>(
+const LoginWrapper = forwardRef<HTMLDivElement, WrapperProps>(
     ({children, className, width, ...props}, ref) => {
 
         const boxClasses = clsx(
@@ -26,6 +26,6 @@ const Wrapper = forwardRef<HTMLDivElement, WrapperProps>(
         );
     });
 
-Wrapper.displayName = "Wrapper";
+LoginWrapper.displayName = "Wrapper";
 
-export default Wrapper;
+export default LoginWrapper;

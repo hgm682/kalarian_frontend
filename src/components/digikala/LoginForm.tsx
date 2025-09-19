@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import {useRouter} from "next/router";
-import {Wrapper} from "@/components/auth/Wrapper";
+import {LoginWrapper} from "@/components/auth/LoginWrapper/LoginWrapper";
 import PasswordInput from "@/components/digikala/PasswordInput";
 import OtpInput from "@/components/digikala/OtpInput/OtpInput";
 import OTPResend from "@/components/digikala/OTPResend";
