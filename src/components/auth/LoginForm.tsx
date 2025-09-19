@@ -4,7 +4,7 @@ import Form from "@/components/Form/Form";
 import styles from "@/components/digikala/FormComponentFrame.module.css";
 import Input from "@/components/Input/Input";
 import textField from "@/components/digikala/TextField/TextField.module.css";
-import Button from "@/components/Button";
+import Button from "@/components/Button/Button";
 import Link from "next/link";
 import {urls as URLS} from "@/constants/Constants";
 
