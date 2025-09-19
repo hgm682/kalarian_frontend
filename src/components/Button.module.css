@@ -1,32 +1,24 @@
-.Button__element {
-
-}
-
 .Button {
 
 }
 
-.Button.tsx--fullWidth {
+.Button--fullWidth {
 
 }
 
-.Button.tsx--disabled {
+.Button--disabled {
 
 }
 
-.Button.tsx--loading {
+.Button--loading {
 
 }
 
-.Button.tsx--active {
+.Button--active {
 
 }
 
-.Button.tsx--disabled {
-
-}
-
-.Button.tsx--loading {
+.Button__element {
 
 }
 
@@ -43,29 +35,5 @@
 }
 
 .Button__icon--right {
-
-}
-
-.Button.tsx--loading {
-
-}
-
-.Button.tsx--disabled {
-
-}
-
-.Button.tsx--active {
-
-}
-
-.Button.tsx--loading {
-
-}
-
-.Button.tsx--disabled {
-
-}
-
-.Button.tsx--fullWidth {
 
 }

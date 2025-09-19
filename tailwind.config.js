@@ -7,7 +7,10 @@ const config = {
     theme: {
         extend: {},
     },
-    plugins: [],
+    plugins: {
+        '@tailwindcss/postcss': {},
+    }
+
 };
 
 export default config;

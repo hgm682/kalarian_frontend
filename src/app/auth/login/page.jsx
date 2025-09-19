@@ -6,10 +6,9 @@ import Form from "../../../components/Form/Form";
 import {redirectIfLogin} from "../../../components/auth/PageWrapper";
 import Link from "next/link";
 import {urls as URLS} from "../../../constants/Constants";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {useRouter, useSearchParams} from "next/navigation";
 import {AuthStep} from "../../../constants/AuthStep";
-import {errorMessages} from '../../../constants/Validation';
 import Wrapper from "../../../components/auth/Wrapper";
 import Header from "../../../components/auth/Header";
 import styles from "../../../components/digikala/FormComponentFrame.module.css";
@@ -30,10 +29,6 @@ function LoginForm({setStep, setResponse, setUsername}) {
                 useFormProps={{mode: 'onBlur'}}
                 onSubmit={({username}) => {
                     username = username.trim();
-                    // sendInTrackUserEvent({
-                    //     eventName: LOGIN_EVENTS.LOGIN_CONTINUE,
-                    //     eventData: { isValid: true, isMobile: isMobileNumber(username) }
-                    // });
                     setUsername(username);
                     request({username});
                 }}>

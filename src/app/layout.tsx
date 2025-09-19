@@ -6,7 +6,7 @@ import ClientWrapper from "@/components/ClientWrapper";
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html lang="fa" dir="rtl">
+        <html lang="fa" dir="rtl" data-theme="cupcake">
             <Head/>
             <body>
                 <ClientWrapper>{children}</ClientWrapper>

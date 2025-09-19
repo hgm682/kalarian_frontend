@@ -1,5 +1,5 @@
 import React, {forwardRef} from "react";
-import styles from "@/components/Button.module.css";
+import styles from "./Button.module.css";
 import {clsx} from "clsx";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -46,12 +46,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             styles[`Button--${variant}`],
             styles[`Button--${size}`],
             {
-                [styles['Button.tsx--fullWidth']]: fullWidth,
-                [styles['Button.tsx--disabled']]: disabled,
-                [styles['Button.tsx--loading']]: isLoading,
-                [activeClassName || styles['Button.tsx--active']]: !disabled && !isLoading,
-                [disabledClassName || styles['Button.tsx--disabled']]: disabled,
-                [loadingClassName || styles['Button.tsx--loading']]: isLoading,
+                [styles['Button--fullWidth']]: fullWidth,
+                [styles['Button--disabled']]: disabled,
+                [styles['Button--loading']]: isLoading,
+                [activeClassName || styles['Button--active']]: !disabled && !isLoading,
+                [disabledClassName || styles['Button--disabled']]: disabled,
+                [loadingClassName || styles['Button--loading']]: isLoading,
             },
             containerClassName,
             className
