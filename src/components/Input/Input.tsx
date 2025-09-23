@@ -54,6 +54,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             inputWrapperClassName
         );
 
+        console.log(inputClasses)
         return (
             <InputWrapper
                 ref={ref}

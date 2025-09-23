@@ -1,11 +1,31 @@
-.InputWrapper--error {
+.Input_InputWrapper {
+    border: 1px solid var(--color-neutral-100)!important;
+    border-radius: 8px!important;
+    overflow: hidden
+}
 
+@media (min-width: 1024px) {
+    .Input_InputWrapper {
+        border:1px solid var(--color-neutral-300)!important
+    }
+}
+
+.InputWrapper--error {
+    border-bottom: 2px solid var(--color-hint-object-error)!important
+}
+
+@media (min-width: 1024px) {
+    .InputWrapper--error {
+        border:1px solid var(--color-hint-object-error)!important
+    }
 }
 
 .InputWrapper--focus {
-
+    border-bottom: 2px solid var(--color-blue-primary)!important
 }
 
-.InputWrapper--disabled {
-
+@media (min-width: 1024px) {
+    .InputWrapper--focus {
+        border:1px solid var(--color-blue-primary)!important
+    }
 }

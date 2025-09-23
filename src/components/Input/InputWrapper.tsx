@@ -123,7 +123,6 @@ const InputWrapper = forwardRef<HTMLInputElement | HTMLTextAreaElement , InputWr
             successPhraseClassName
         );
 
-        const inputRef = useRef<HTMLInputElement>(null) || ref;
         const textareaRef = useRef<HTMLTextAreaElement>(null) || ref;
 
         return (
@@ -135,7 +134,7 @@ const InputWrapper = forwardRef<HTMLInputElement | HTMLTextAreaElement , InputWr
                         {required && <span className={requiredClassName}> *</span>}
                     </label>
                 )}
-                <div className="relative flex items-center">
+                <div className="grow text-body-3">
                     {prependIcon && (
                         <span
                             className="absolute left-0 pl-3 pointer-events-none"
@@ -165,10 +164,9 @@ const InputWrapper = forwardRef<HTMLInputElement | HTMLTextAreaElement , InputWr
                         />
                     ) : (
                         <input
-                            ref={inputRef}
                             id={name}
                             name={name}
-                            type={type}
+                            type={type || "text"}
                             value={value}
                             placeholder={placeholder}
                             autoFocus={autoFocus}
@@ -176,9 +174,10 @@ const InputWrapper = forwardRef<HTMLInputElement | HTMLTextAreaElement , InputWr
                             required={required}
                             className={inputClasses}
                             disabled={disabled}
-                            {...inputProps}
                             onFocus={handleFocus}
                             onBlur={handleBlur}
+                            ref={ref as React.Ref<HTMLInputElement>}
+                            {...inputProps}
                         />
                     )}
                 </div>

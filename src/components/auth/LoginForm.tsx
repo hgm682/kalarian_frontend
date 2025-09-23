@@ -20,10 +20,14 @@ function LoginForm() {
             </p>
             <Form>
                 <label className={`${styles['FormComponentFrame']} w-full ${styles['FormComponentFrame--normal']}`}>
-                    <Input isTextarea={false}
-                           inputClassName={`px-2 ${textField['TextField__input']} text-subtitle w-full ${textField['TextField']} ${textField['TextField--secondary']} text-subtitle w-full py-5 lg:py-2 rounded-medium`}/>
+                    <Input isTextarea={false} inputWrapperClassName={`${styles['FormComponentFrame__input-container']}`}
+                           type={'text'}
+                           inputClassName={`${textField['TextField__input']} ${textField['TextField']} ${textField['TextField--secondary']}`}
+                           name={'username'} autoComplete={'off'}/>
                 </label>
-                <Button/>
+                <Button
+                    className={'relative flex items-center rounded-medium w-full mt-6 lg:mt-8 text-button-1 btn btn-primary btn-xl'}
+                    label={'ورود'}/>
                 <p className="text-caption text-neutral-700 mt-4">
                     ورود شما به معنای پذیرش
                     <Link href={URLS.TERMS()} className="mx-1 inline-block text-secondary-700">

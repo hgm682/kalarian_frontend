@@ -3,95 +3,55 @@ import styles from "./Button.module.css";
 import {clsx} from "clsx";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    isLoading?: boolean;
-    containerClassName?: string,
-    color?: string;
-    disabled?: boolean;
-    variant?: "primary" | "secondary";
+    mode?: string;
     size?: "small" | "medium" | "large";
-    fullWidth?: boolean;
-    activeClassName?: string,
-    disabledClassName?: string,
-    loadingClassName?: string,
+    color?: string;
     className?: string,
-    iconLeft?: React.ReactNode,
-    iconLeftColor?: string,
-    iconRight?: React.ReactNode,
-    iconRightColor?: string,
+    label?: string,
+    CROId?: string,
+    isLoading?: boolean;
+    disabled?: boolean;
+    radiusSize?: number;
+    to?: string;
+    useAnchorTag?: boolean;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     ({
-         children,
-         isLoading,
-         containerClassName,
-         color,
-         disabled,
-         variant,
-         size,
-         fullWidth,
-         activeClassName,
-         disabledClassName,
-         loadingClassName,
+         mode = "filled",
+         size = "medium",
+         color = "primary",
          className,
-         iconLeft,
-         iconLeftColor,
-         iconRight,
-         iconRightColor,
+         label,
+         CROId,
+         isLoading = false,
+         disabled = false,
+         radiusSize = "md",
+         to,
+         useAnchorTag = false,
+         children,
          ...props
      }, ref) => {
-
-        const containerClasses = clsx(
-            styles['Button'],
-            styles[`Button--${variant}`],
-            styles[`Button--${size}`],
-            {
-                [styles['Button--fullWidth']]: fullWidth,
-                [styles['Button--disabled']]: disabled,
-                [styles['Button--loading']]: isLoading,
-                [activeClassName || styles['Button--active']]: !disabled && !isLoading,
-                [disabledClassName || styles['Button--disabled']]: disabled,
-                [loadingClassName || styles['Button--loading']]: isLoading,
-            },
-            containerClassName,
+        const classes = clsx(
+            styles.button,
+            styles[mode],
+            styles[size],
+            styles[color],
+            styles[`radius-${radiusSize}`],
+            { [styles.loading]: isLoading, [styles.disabled]: disabled },
             className
         );
 
-        const buttonStyles = color
-            ? {backgroundColor: color, borderColor: color}
-            : {};
-
         return (
-            <div className={containerClasses}>
-                <button
-                    ref={ref}
-                    className={styles['Button__element']}
-                    style={buttonStyles} {...props}
-                >
-                    {iconLeft && (
-                        <span
-                            className={clsx(styles['Button__icon'], styles['Button__icon--left'])}
-                            style={{color: iconLeftColor}}
-                        >
-                          {iconLeft}
-                        </span>
-                    )}
-                    {isLoading ? (
-                        <span className={styles['Button__loader']}>در حال بارگذاری...</span>
-                    ) : (
-                        children
-                    )}
-
-                    {iconRight && (
-                        <span
-                            className={clsx(styles['Button__icon'], styles['Button__icon--right'])}
-                            style={{color: iconRightColor}}
-                        >
-                              {iconRight}
-                            </span>
-                    )}
-                </button>
-            </div>
+            <button
+                ref={ref as React.Ref<HTMLButtonElement>}
+                className={classes}
+                disabled={disabled || isLoading}
+                data-cro-id={CROId}
+                {...props}
+            >
+                {isLoading ? "Loading..." : label || children}
+            </button>
         );
     }
 );
