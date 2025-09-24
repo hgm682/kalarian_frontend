@@ -3,10 +3,10 @@
 import React, {forwardRef} from "react";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
-import Logo from "../Logo";
+import Logo from "../Logo/Logo";
 import clsx from "clsx";
 import {AuthStep} from "@/constants/AuthStep";
-import styles from "@/components/auth/LoginWrapper/LoginWrapper.module.css";
+import styles from "@/components/Auth/LoginWrapper/LoginWrapper.module.css";
 import {Icon} from "@/components/Icon";
 
 interface HeaderProps extends React.HTMLProps<HTMLDivElement> {

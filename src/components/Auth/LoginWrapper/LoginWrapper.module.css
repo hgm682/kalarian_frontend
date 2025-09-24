@@ -1,0 +1,9 @@
+.login-wrapper-mainBox {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .login-wrapper-mainBox {
+        max-width: 400px;
+    }
+}

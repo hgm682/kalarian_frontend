@@ -1,0 +1,12 @@
+.logo-icon {
+    right: 20px;
+    top: 16px;
+}
+
+@media (min-width: 1024px) {
+    .logo-icon {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

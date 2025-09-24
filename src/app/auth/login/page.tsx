@@ -1,6 +1,6 @@
-import LoginWrapper from "@/components/auth/LoginWrapper/LoginWrapper";
-import LoginHeader from "@/components/auth/LoginHeader";
-import LoginForm from "@/components/auth/LoginForm";
+import LoginWrapper from "@/components/Auth/LoginWrapper/LoginWrapper";
+import LoginHeader from "@/components/Auth/LoginHeader";
+import LoginForm from "@/components/Auth/LoginForm";
 
 function LoginPage() {
     return (

@@ -54,7 +54,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             inputWrapperClassName
         );
 
-        console.log(inputClasses)
         return (
             <InputWrapper
                 ref={ref}
@@ -66,7 +65,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                 isTextarea={isTextarea}
                 inputProps={{
                     ...inputProps,
-                    className: styles.input
+                    className: clsx(styles.input, inputClasses)
                 }}
             />
         );
